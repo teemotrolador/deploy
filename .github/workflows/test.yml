@@ -17,11 +17,11 @@ jobs:
     - name: Copy to Remote Server
       uses: ./ 
       with:
-        host: ${{ secrets.DESTINATION_HOST }}
-        ssh_port: ${{ secrets.DESTINATION_SSH_PORT }}
-        ssh_username: ${{ secrets.SSH_USERNAME }}
-        ssh_key: ${{ secrets.SSH_KEY }}
-        ssh_passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        source_dir: ${{ secrets.SOURCE_FOLDER }}
-        destination_dir: ${{ secrets.DESTINATION_FOLDER }}
+        host: ${{ vars.HOST }}
+        ssh_port: ${{ vars.PORT }}
+        ssh_username: ${{ vars.USERNAME }}
+        ssh_key: ${{ vars.SSHKEY }}
+        ssh_passphrase: ${{ vars.PSW }}
+        source_dir: "test"
+        destination_dir: home/projeto3
         rm: true
